@@ -1,0 +1,192 @@
+@import "./variables";
+@import "./mixins";
+
+.home-wrapper {
+  width: 80%;
+  display: block;
+  margin: auto 0 auto auto;
+  #page-content {
+    display: flex;
+    width: 100%;
+  }
+  #content-no-result {
+    width: 98%;
+    transition-duration: $smooth-transition;
+  }
+  #result {
+    transition-delay: $smooth-transition;
+  }
+  .result-close {
+    display: none;
+  }
+  .result-open {
+    display: inline-block;
+    width: 35%;
+  }
+  section {
+    button {
+      border: none;
+      background: transparent;
+      position: absolute;
+      right: 3%;
+      width: auto;
+      top: 6%;
+    }
+    button:focus {
+      outline: none;
+    }
+    img {
+      width: 85px;
+      height: 85px;
+      display: block;
+      margin: auto;
+      margin-top: 5%;
+    }
+    h5,
+    p {
+      text-align: center;
+      margin: 0 auto 0 auto;
+    }
+    label {
+      margin: 0 12px;
+    }
+  }
+}
+.page-header {
+  text-align-last: center;
+}
+.home-header {
+  h4 {
+    color: $page-header-title;
+  }
+  p {
+    color: #a1a1a1;
+  }
+}
+.search {
+  img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 5px;
+  }
+  input {
+    display: block;
+    margin: auto;
+    margin-left: 5%;
+    width: 90%;
+    height: 50px;
+    border: none;
+    font-size: large;
+    text-align-last: left;
+  }
+  input::placeholder {
+    color: $input-placeholder;
+  }
+  input:focus {
+    outline: none;
+  }
+  @include blockCenter();
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  width: 65%;
+}
+.result-header {
+  @include blockCenter();
+  section {
+    p {
+      color: $result-title;
+    }
+  }
+}
+.result-body {
+  padding: 0 12px;
+  section {
+    text-align-last: left;
+    margin-bottom: 5%;
+    p {
+      color: $result-title;
+      margin: $text-margin;
+    }
+  }
+  div {
+    p {
+      color: $result-title;
+      margin: 20px 0 3px 0;
+    }
+    h5 {
+      margin: $text-margin;
+    }
+  }
+  span {
+    display: inline-block;
+    width: 45%;
+    p,
+    h5 {
+      margin: $text-margin;
+    }
+    p {
+      color: $result-title;
+    }
+  }
+}
+.available-experts {
+  div {
+    display: block;
+  }
+  img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+  }
+  .agent {
+    display: flex;
+    padding: 1% 0;
+    align-items: center;
+    .agent-name {
+      margin: 3px;
+    }
+    .agent-title, .rate-static-text{
+        font-size: x-small;
+    }
+    div {
+      width: 35%;
+      padding: 0 0 0 3%;
+    }
+    .rate-wrapper{
+        width: auto;
+    }
+    p {
+      margin: 0;
+    }
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+      font-size: medium;
+      .video-chat-title{
+        color: black;
+        display: inline-block;
+        margin-left: 12px;
+      }
+    }
+    button:focus {
+      outline: none;
+    }
+    #rate-color{
+        @include rate-color-tex();
+    }
+    .rate-high{
+        @include rate-color-tex();
+        color: #4fa118;
+    }
+    .rate-low{
+        @include rate-color-tex();
+        color: #cc7614;
+    }
+  }
+}

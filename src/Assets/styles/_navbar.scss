@@ -1,0 +1,29 @@
+@import "./variables";
+.navbar {
+  position: absolute;
+  height: 96vh;
+  width: 19%;
+  border-right: 3px solid #dddddd;
+  .logo{
+    width: 50%;
+    display: block;
+    margin: 25% auto 15% 10%;
+  }
+  .nav-icon{
+    height: 45px;
+    width: 45px;
+    margin: 7% 0;
+  }
+}
+.nav-item {
+  color: $navbar-item-deactive;
+  display: flex;
+  margin: 1% auto 1% 10%;
+  p {
+    align-self: center;
+    margin: 8% 0 5% 5%;
+  }
+}
+.nav-active {
+  color: $navbar-item-active;
+}

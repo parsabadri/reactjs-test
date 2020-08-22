@@ -1,0 +1,10 @@
+@mixin blockCenter {
+    display: block;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+@mixin rate-color-tex {
+    margin: 0;
+    width: auto;
+}
